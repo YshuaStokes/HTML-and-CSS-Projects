@@ -4,6 +4,7 @@
 		<title>Basic HTML</title>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="./css/one_page_website.css">
+		<script src="js/1pg.js"></script>
 	</head>
 	<body>
 		<!-- HOME PAGE SECTION -->
@@ -27,73 +28,98 @@
 		<!-- SECTION WITH PICTURES -->
 		<section>
 			<div id="gallery">
-					<!-- END PHOTO-CONTAINER 1 -->
-					<!-- PHOTO-CONTAINER 2 -->
-					<div>
-						<div>
-							<img src="Screenshots/DOOM.jpeg" alt="DOOM ETERNAL">
-							<div>
-								<h3>Click to Enlarge</h3>
-								<p>DOOM:Eternal</p>
-							</div>
-						</div>
+				<!-- Images used to open the lightbox -->
+				<div class="row">
+					<div class="column">
+						<img src="Screenshots/DOOM.jpeg" width="200px" onclick="openModal();currentSlide(1)" class="hover-shadow">
 					</div>
-					<!-- END PHOTO-CONTAINER 2 -->
-					<!-- PHOTO-CONTAINER 3 -->
-					<div>
-						<div>
-							<img src="Screenshots/splitgate.jpeg" alt="Splitgate">
-							<div>
-								<h3>Click to Enlarge</h3>
-								<p>Splitgate</p>
-							</div>
-						</div>
+					<div class="column">
+						<img src="Screenshots/splitgate.jpeg" width="200px" onclick="openModal();currentSlide(2)" class="hover-shadow">
 					</div>
-					<!-- END PHOTO-CONTAINER 3 -->
-					<!-- PHOTO-CONTAINER 4 -->
-					<div>
-						<div>
-							<img src=".Screenshots/WoT.jpeg" alt="World of Tanks">
-							<div>
-								<h3>Click to Enlarge</h3>
-								<p>World of Tanks</p>
-							</div>
-						</div>
+					<div class="column">
+						<img src="Screenshots/WoT.jpeg" width="200px" onclick="openModal();currentSlide(3)" class="hover-shadow">
 					</div>
-					<!-- END PHOTO-CONTAINER 4 -->
-					<!-- PHOTO-CONTAINER 5 -->
-					<div>
-						<div>
-							<img src="Screenshots/MTGA.jpeg" alt="MTGA">
-							<div>
-								<h3>Click to Enlarge</h3>
-								<p>Magic: The Gathering Arena</p>
-							</div>
-						</div>
+					<div class="column">
+						<img src="Screenshots/MTGA.jpeg" width="200px" onclick="openModal();currentSlide(4)" class="hover-shadow">
 					</div>
-					<!-- END PHOTO-CONTAINER 5 -->
-					<!-- PHOTO-CONTAINER 6 -->
-					<div>
-						<div>
-							<img src="Screenshots/dota2.jpeg" alt="DOTA 2">
-							<div>
-								<h3>Click to Enlarge</h3>
-								<p>DOTA2</p>
-							</div>
-						</div>
+					<div class="column">
+						<img src="Screenshots/dota2.jpeg" width="200px" onclick="openModal();currentSlide(5)" class="hover-shadow">
 					</div>
-					<!-- END PHOTO-CONTAINER 6 -->
-					<!-- PHOTO-CONTAINER 7 -->
-					<div>
-						<div>
-							<img src="Screenshots/Warzone.jpeg" alt="Warzone">
-							<div>
-								<h3>Click to Enlarge</h3>
-								<p>Call of Duty: Warzone</p>
-							</div>
-						</div>
+					<div class="column">
+						<img src="Screenshots/Warzone.jpeg" width="200px" onclick="openModal();currentSlide(6)" class="hover-shadow">
 					</div>
-					<!-- END PHOTO-CONTAINER 7 -->
+				</div>
+			</div>
+
+			<!-- The Modal/Lightbox -->
+			<div id="myModal" class="modal">
+				<span class="close cursor" onclick="closeModal()">&times;</span>
+				<div class="modal-content">
+			
+					<div class="mySlides">
+						<div class="numbertext">1 / 4</div>
+						<img src="Screenshots/DOOM.jpeg" style="width:100%">
+					</div>
+			
+					<div class="mySlides">
+						<div class="numbertext">2 / 4</div>
+						<img src="Screenshots/splitgate.jpeg" style="width:100%">
+					</div>
+			
+					<div class="mySlides">
+						<div class="numbertext">3 / 4</div>
+						<img src="Screenshots/WoT.jpeg" style="width:100%">
+					</div>
+			
+					<div class="mySlides">
+						<div class="numbertext">4 / 4</div>
+						<img src="Screenshots/MTGA.jpeg" style="width:100%">
+					</div>
+
+					<div class="mySlides">
+						<div class="numbertext">5 / 6</div>
+						<img src="Screenshots/dota2.jpeg" style="width:100%">
+					</div>
+
+					<div class="mySlides">
+						<div class="numbertext">6 / 6</div>
+						<img src="Screenshots/Warzone.jpeg" style="width:100%">
+					</div>
+					
+					<!-- Next/previous controls -->
+					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+					<a class="next" onclick="plusSlides(1)">&#10095;</a>
+			
+					<!-- Caption text -->
+					<div class="caption-container">
+						<p id="caption"></p>
+					</div>
+			
+					<!-- Thumbnail image controls -->
+					<div class="column">
+						<img class="demo" src="Screenshots/DOOM.jpeg" width="150px" onclick="currentSlide(1)" alt="DOOM:Eternal">
+					</div>
+			
+					<div class="column">
+						<img class="demo" src="Screenshots/splitgate.jpeg" width="150px" onclick="currentSlide(2)" alt="Splitgate">
+					</div>
+			
+					<div class="column">
+						<img class="demo" src="Screenshots/WoT.jpeg" width="150px" onclick="currentSlide(3)" alt="World of Tanks">
+					</div>
+			
+					<div class="column">
+						<img class="demo" src="Screenshots/MTGA.jpeg" width="150px" onclick="currentSlide(4)" alt="Magic: the Gathering, Arena">
+					</div>
+
+					<div class="column">
+						<img class="demo" src="Screenshots/dota2.jpeg" width="150px" onclick="currentSlide(5)" alt="DOTA2">
+					</div>
+
+					<div class="column">
+						<img class="demo" src="Screenshots/Warzone.jpeg" width="150px" onclick="currentSlide(6)" alt="Warzone">
+					</div>
+				</div>
 			</div>
 		</section>
 
